@@ -22,7 +22,8 @@
         "start":     el.selectionStart,
         "end":       el.selectionEnd,
         "direction": el.selectionDirection,
-        "selected":  el.value.substr(el.selectionStart, el.selectionEnd - el.selectionStart),
+        "text":      el.value.substr(el.selectionStart, el.selectionEnd - el.selectionStart),
+        "selected":  el.selectionStart !== el.selectionEnd,
         "length":    el.selectionEnd - el.selectionStart
       };
     }
